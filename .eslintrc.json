@@ -1,0 +1,11 @@
+{
+    "extends": [
+        "plugin:@wordpress/eslint-plugin/recommended",
+        "plugin:react/recommended"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
