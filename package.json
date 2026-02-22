@@ -2,6 +2,7 @@
   "name": "ai-quota-monitor",
   "displayName": "AI Quota Monitor",
   "description": "Real-time Antigravity AI model quota and usage monitor with a stunning visual dashboard. Track Gemini, Claude, GPT limits directly inside Antigravity/VS Code.",
+  "publisher": "cyberadityacode",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.80.0"
