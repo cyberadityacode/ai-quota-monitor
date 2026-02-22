@@ -118,11 +118,9 @@ Works seamlessly across operating systems:
 
 ## 📸 Extension Preview
 
-*(Add your screenshots here — screenshots significantly improve marketplace SEO)*
+![AI Quota Monitor Dashboard](./screenshot.png)
 
-* Dashboard overview
-* Status bar integration
-* Offline detection state
+*AI Quota Monitor Dashboard showing real-time model quotas and health status.*
 
 ---
 
