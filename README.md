@@ -1,249 +1,282 @@
-# AI Quota Monitor
 
-> **Real-time Antigravity AI model quota and usage dashboard — right inside VS Code.**
->
-> **Author:** [Aditya Dubey](https://github.com/cyberadityacode)
+# 🚀 AI Quota Monitor — Real-Time AI Usage & Quota Dashboard for Antigravity & VS Code
 
-Monitor your Gemini, Claude, and GPT model limits without leaving your editor. AI Quota Monitor automatically detects the Antigravity language server, fetches live quota data, and renders a beautiful visual dashboard with animated progress rings, color-coded health indicators, and reset countdowns.
+**AI Quota Monitor** is a developer-focused Antigravity/VS Code extension that shows **real-time AI model usage, quota limits, and reset timers** directly inside your editor.
 
----
+Track usage for **Gemini, Claude, GPT, and Antigravity AI models** without switching tabs or interrupting your workflow.
 
-## 📸 Screenshots
+👉 Built for developers who rely on AI coding assistants and want **complete visibility over token limits, usage health, and remaining quota**.
 
-<!-- Dashboard overview screenshot -->
-> *Screenshot: Dashboard overview showing model quota cards — add your screenshot here*
-
-![AI Quota Monitor Dashboard](./images/dashboard.png)
-
-<!-- Status bar screenshot -->
-> *Screenshot: Status bar showing live quota summary — add your screenshot here*
-
-![Status Bar Integration](./images/statusbar.png)
-
-<!-- Error / offline state screenshot -->
-> *Screenshot: Graceful offline state when Antigravity is not running — add your screenshot here*
-
-![Offline State](./images/offline.png)
+**Author:** Aditya Dubey
+GitHub: [https://github.com/cyberadityacode](https://github.com/cyberadityacode)
 
 ---
 
-## ✨ Features
+## 🧠 What Problem Does AI Quota Monitor Solve?
 
-### 🔴🟡🟢 Visual Model Cards
-Each AI model gets its own card with:
-- **Animated SVG circular progress ring** — fills/drains as your quota changes
-- **Color-coded health status** — green (>50%), amber (20–50%), red (<20%), grey (exhausted)
-- **Health pill label** — Healthy / Low / Critical / Exhausted at a glance
-- **Reset countdown** — shows exactly how long until your quota refreshes (e.g. `2h 15m`)
+Modern AI IDEs and coding assistants impose hidden limits:
 
-### ⚡ Zero-Config Auto Detection
-No manual setup required. The extension automatically:
-1. Scans your running processes for the Antigravity language server
-2. Extracts the secure port and CSRF token from the process arguments
-3. Connects to the local gRPC/Connect-RPC endpoint
-4. Starts polling every 2 minutes
+* Token quotas
+* Prompt credits
+* Model usage caps
+* Silent throttling
+* Unknown reset times
 
-### 📊 Prompt Credits Panel
-View your available and monthly **Prompt Credits** alongside model quotas — all in one place.
+Developers often hit limits unexpectedly — breaking flow during coding sessions.
 
-### 🔔 Status Bar Integration
-The extension adds a persistent item to your VS Code status bar showing the most-at-risk model's remaining percentage. Click it to open the full dashboard instantly.
+**AI Quota Monitor solves this by providing a live AI usage dashboard inside VS Code.**
 
-### 🔄 Live Refresh
-Hit the **Refresh** button inside the dashboard (with a satisfying spin animation) or run the **AI Quota Monitor: Refresh Now** command from the Command Palette for an immediate update.
+You always know:
+
+✅ How much quota remains
+✅ Which model is at risk
+✅ When limits reset
+✅ Current usage health
+
+---
+
+## ✨ Key Features
+
+### 📊 Real-Time AI Model Quota Dashboard
+
+Visual cards display live usage for each AI model:
+
+* Animated circular quota progress rings
+* Remaining percentage indicator
+* Health status (Healthy / Low / Critical / Exhausted)
+* Automatic reset countdown timer
+
+Supported models include:
+
+* Gemini models
+* Claude models
+* GPT models
+* Antigravity language server models
+
+---
+
+### ⚡ Zero Configuration Setup
+
+No API keys. No login. No setup.
+
+The extension automatically:
+
+1. Detects the Antigravity language server
+2. Extracts secure local session tokens
+3. Connects to the local RPC endpoint
+4. Fetches live quota data every 2 minutes
+
+Install → Open → Monitor instantly.
+
+---
+
+### 🔔 Smart Status Bar Monitoring
+
+A persistent VS Code status bar indicator shows:
+
+* The **most critical model**
+* Remaining quota percentage
+* Dynamic warning icons as limits drop
+
+Click to open the full dashboard instantly.
+
+---
+
+### 📈 Prompt Credits Tracking
+
+View monthly and remaining prompt credits alongside model quotas.
+
+Perfect for monitoring subscription usage and avoiding throttling.
+
+---
+
+### 🔄 Live Refresh Controls
+
+* One-click refresh inside dashboard
+* Command Palette support
+* Animated refresh feedback
+
+Command:
+
+```
+AI Quota Monitor: Refresh Now
+```
+
+---
 
 ### 🖥️ Cross-Platform Support
+
+Works seamlessly across operating systems:
+
 | Platform | Detection Method |
-|---|---|
-| **Linux** | `ps aux` + `ss -tlnp` |
-| **macOS** | `ps aux` + `lsof` |
-| **Windows** | `wmic` + `netstat -ano` |
+| -------- | ---------------- |
+| Linux    | ps + ss          |
+| macOS    | ps + lsof        |
+| Windows  | wmic + netstat   |
 
 ---
 
-## 🚀 Getting Started
+## 📸 Extension Preview
 
-### Prerequisites
-- [Antigravity IDE](https://antigravity.google) installed and running
-- VS Code `^1.80.0` or Antigravity (which is built on VS Code)
+*(Add your screenshots here — screenshots significantly improve marketplace SEO)*
 
-### Installation
+* Dashboard overview
+* Status bar integration
+* Offline detection state
 
-**From the Extension Marketplace:**
-1. Open VS Code / Antigravity
-2. Go to Extensions (`Ctrl+Shift+X`)
-3. Search for **"AI Quota Monitor"**
-4. Click **Install**
+---
 
-**From VSIX (manual):**
+## 🚀 Installation Guide
+
+### From VS Code Marketplace
+
+1. Open Extensions (`Ctrl + Shift + X`)
+2. Search **AI Quota Monitor**
+3. Click Install
+
+### Manual Installation (VSIX)
+
 ```bash
 code --install-extension ai-quota-monitor-1.0.0.vsix
 ```
 
-### Usage
-1. Make sure Antigravity is running (the language server must be active)
-2. Open the Command Palette (`Ctrl+Shift+P`)
-3. Run **`AI Quota Monitor: Show Dashboard`**
-4. The dashboard opens in a side panel with live data
+---
+
+## ▶️ How to Use
+
+1. Launch Antigravity IDE
+2. Ensure the language server is running
+3. Open Command Palette (`Ctrl + Shift + P`)
+4. Run:
+
+```
+AI Quota Monitor: Show Dashboard
+```
+
+Your live AI quota dashboard opens instantly.
 
 ---
 
-## 🗂️ Commands
+## 🧩 Available Commands
 
-| Command | Description |
-|---|---|
-| `AI Quota Monitor: Show Dashboard` | Open the visual quota dashboard |
-| `AI Quota Monitor: Refresh Now` | Force an immediate quota data refresh |
-
-Access all commands from the Command Palette (`Ctrl+Shift+P`) by typing `AI Quota Monitor`.
+| Command        | Description                  |
+| -------------- | ---------------------------- |
+| Show Dashboard | Opens visual quota dashboard |
+| Refresh Now    | Fetch latest quota data      |
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ How AI Quota Monitor Works
 
-AI Quota Monitor talks exclusively to the **local** Antigravity language server — no external network calls, no auth setup.
-
-```
-Antigravity Language Server (local)
-         │
-         │  HTTPS  POST /exa.language_server_pb.LanguageServerService/GetUserStatus
-         │  Header: x-codeium-csrf-token: <auto-detected>
-         ▼
-AI Quota Monitor Extension
-         │
-         ▼
-    VS Code Webview Dashboard
-```
-
-1. **Process detection** — finds `language_server` in running processes
-2. **Port discovery** — uses `ss` / `lsof` / `netstat` to find all listening ports
-3. **Secure request** — sends a Connect-RPC POST with the session CSRF token (self-signed cert, local only)
-4. **Parse & render** — extracts `clientModelConfigs`, `quotaInfo`, `planStatus` and renders the dashboard
-
-All communication stays on `127.0.0.1`. No data leaves your machine.
-
----
-
-## 📈 Dashboard Explained
-
-### Model Cards
+AI Quota Monitor communicates only with the **local Antigravity language server**.
 
 ```
-┌─────────────────────────────┐
-│  Gemini 3.1 Pro      Healthy│
-│         ○                   │
-│       80%                   │
-│     remaining               │
-│  Status      Resets in      │
-│  80% left    2h 15m         │
-└─────────────────────────────┘
+Local Language Server
+        ↓
+Secure Local HTTPS Request
+        ↓
+Quota Data Extraction
+        ↓
+VS Code Dashboard Rendering
 ```
 
-- **Ring** — fills proportionally to the quota remaining
-- **Percent** — exact percentage remaining in this refresh window
-- **Status** — human-readable summary (Full / X% left / Exhausted)
-- **Resets in** — countdown to next quota reset (pulled directly from the API)
+### Technical Flow
 
-### Status Bar
+* Detect running language server process
+* Discover active ports automatically
+* Send secure Connect-RPC request
+* Parse quota configuration
+* Render real-time UI
 
-```
-$(pass-filled) Gemini 3.1 Pro: 80%
-```
-Shows the lowest-quota model so you always see the most critical situation first. Icon changes to `$(warning)` or `$(error)` as quota drops.
-
-### Prompt Credits Panel
-
-When available, shows your remaining Prompt Credits and the monthly allowance:
-
-```
-Prompt Credits
-500    of 50,000 monthly
-```
+✅ No cloud communication
+✅ No external API calls
+✅ Fully local execution
 
 ---
 
 ## 🔒 Privacy & Security
 
-- **100% local** — only connects to `127.0.0.1` (your own machine)
-- **No telemetry** — zero analytics or usage tracking
-- **No stored credentials** — reads the CSRF token from the process at runtime only
-- **Self-signed cert** — the Antigravity language server uses a local self-signed TLS certificate; the extension accepts it safely since the connection never leaves localhost
+Developer privacy is a core design principle.
+
+* 100% local communication (127.0.0.1 only)
+* No telemetry
+* No analytics tracking
+* No credential storage
+* No external servers
+
+Your usage data never leaves your machine.
 
 ---
 
-## 🛠️ Configuration
+## 📊 Dashboard Explained
 
-Currently the extension uses sensible defaults with no required configuration. Future versions will expose settings for:
+Each model card displays:
 
-| Setting | Default | Description |
-|---|---|---|
-| `aiQuotaMonitor.pollingInterval` | `120000` | Polling interval in ms (2 minutes) |
-| `aiQuotaMonitor.showStatusBar` | `true` | Show/hide the status bar item |
+* **Quota Ring** → Remaining usage visually
+* **Percentage** → Exact quota remaining
+* **Health Status** → Instant risk awareness
+* **Reset Timer** → Next refresh window
+
+Status bar always prioritizes the lowest remaining quota.
 
 ---
 
-## 🔧 Building from Source
+## 🛠 Configuration (Upcoming)
+
+Planned customizable settings:
+
+| Setting         | Default | Purpose                      |
+| --------------- | ------- | ---------------------------- |
+| pollingInterval | 120000  | Data refresh interval        |
+| showStatusBar   | true    | Toggle status bar visibility |
+
+---
+
+## 🔧 Build From Source
 
 ```bash
-# Clone the repository
 git clone https://github.com/your-username/ai-quota-monitor.git
 cd ai-quota-monitor
-
-# Install dependencies
 npm install
-
-# Compile TypeScript
 npm run compile
-
-# Watch mode (auto-recompile on changes)
 npm run watch
 ```
 
-To test locally, press **F5** in VS Code / Antigravity to launch the Extension Development Host.
+Press **F5** in VS Code to start Extension Development Host.
 
 ---
 
 ## 🐛 Troubleshooting
 
-**Dashboard shows "Could not connect"**
-- Make sure Antigravity is fully loaded (not just VS Code — the *Antigravity* extension must be active)
-- Try reloading the window: `Ctrl+Shift+P` → **Developer: Reload Window**
-- Run the Refresh command to trigger re-detection
+### Dashboard Cannot Connect
 
-**Status bar shows "AI Quota: Offline"**
-- The language server process wasn't found. Check that you have the Antigravity extension installed and enabled.
+* Ensure Antigravity IDE is fully loaded
+* Reload window via Command Palette
+* Run manual refresh
 
-**Models show 100% on every refresh**
-- Some plan tiers report unlimited quota as `remainingFraction: 1`. This is expected behavior from the API.
+### Status Shows Offline
+
+Language server not detected — verify Antigravity extension is active.
+
+### Always Shows 100%
+
+Unlimited plans may report full quota continuously.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions are welcome.
 
-1. Fork the repository
-2. Create a branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m 'Add your feature'`
-4. Push: `git push origin feature/your-feature`
-5. Open a Pull Request
+1. Fork repository
+2. Create feature branch
+3. Commit changes
+4. Open Pull Request
 
 ---
 
 ## 📄 License
 
-MIT © 2026 [Aditya Dubey](https://github.com/cyberadityacode)
+MIT © 2026 Aditya Dubey (cyberadityacode)
 
 ---
-
-## 🙏 Acknowledgements
-
-Inspired by the open-source work of:
-- [wusimpl/AntigravityQuotaWatcher](https://github.com/wusimpl/AntigravityQuotaWatcher)
-- [Henrik-3/AntigravityQuota](https://github.com/Henrik-3/AntigravityQuota)
-
-Special thanks to the Antigravity community for reverse-engineering the local API.
-
----
-
-*AI Quota Monitor is an independent, community-built extension by [Aditya Dubey](https://github.com/cyberadityacode) and is not affiliated with or endorsed by Google.*
