@@ -1,0 +1,48 @@
+{
+  "name": "ai-quota-monitor",
+  "displayName": "AI Quota Monitor",
+  "description": "Real-time Antigravity AI model quota and usage monitor with a stunning visual dashboard. Track Gemini, Claude, GPT limits directly inside Antigravity/VS Code.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quotavisualizer.show",
+        "title": "AI Quota Monitor: Show Dashboard"
+      },
+      {
+        "command": "quotavisualizer.refresh",
+        "title": "AI Quota Monitor: Refresh Now"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "author": {
+    "name": "Aditya Dubey",
+    "url": "https://github.com/cyberadityacode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyberadityacode/ai-quota-monitor"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "18.x",
+    "typescript": "^5.1.3"
+  }
+}
